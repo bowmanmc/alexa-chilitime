@@ -1,0 +1,42 @@
+{
+    "name": "alexa-chilitime",
+    "version": "1.1.0",
+    "description": "Chilitime Alexa Skill",
+    "main": "index.js",
+    "scripts": {
+        "clean": "rimraf build",
+        "build:compile": "tsc --build tsconfig.json --pretty",
+        "build:install": "cp package.json build/ && cd build/ && npm install --production",
+        "build": "npm-run-all --sequential clean lint build:compile build:install",
+        "commit": "git add . && git status && cz",
+        "lint": "eslint --ignore-path .eslintignore --ext .ts .",
+        "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Michael Bowman",
+    "license": "Apache",
+    "dependencies": {
+        "ask-sdk-core": "^2.6.0",
+        "ask-sdk-model": "^1.18.0",
+        "aws-sdk": "^2.326.0"
+    },
+    "devDependencies": {
+        "@types/node": "^17.0.8",
+        "@typescript-eslint/eslint-plugin": "^5.9.0",
+        "@typescript-eslint/parser": "^5.9.0",
+        "commitizen": "^4.2.4",
+        "cz-conventional-changelog": "^3.3.0",
+        "eslint": "^8.6.0",
+        "eslint-config-prettier": "^8.3.0",
+        "npm-run-all": "^4.1.5",
+        "prettier": "^2.5.1",
+        "rimraf": "^3.0.2",
+        "ts-node": "^10.4.0",
+        "typescript": "^4.5.4"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
+}
