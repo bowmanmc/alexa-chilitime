@@ -10,7 +10,7 @@ const Hello: Alexa.RequestHandler = {
         );
     },
     handle(handlerInput: Alexa.HandlerInput) {
-        const speakOutput = 'Hello World!';
+        const speakOutput = 'Hello Michael!';
         return (
             handlerInput.responseBuilder
                 .speak(speakOutput)
