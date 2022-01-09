@@ -3,14 +3,14 @@
         "publishingInformation": {
             "locales": {
                 "en-US": {
-                    "summary": "Sample Short Description",
-                    "examplePhrases": [
-                        "Alexa open hello world",
-                        "hello",
-                        "help"
-                    ],
                     "name": "alexa-chilitime",
-                    "description": "Sample Full Description"
+                    "summary": "It's Chilitime!",
+                    "description": "Sandbox fun for Michael Bowman",
+                    "examplePhrases": [
+                        "Alexa open chilitime",
+                        "chilitime",
+                        "chili time"
+                    ]
                 }
             },
             "isAvailableWorldwide": true,
