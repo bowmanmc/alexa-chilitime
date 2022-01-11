@@ -9,7 +9,7 @@ const Launch: Alexa.RequestHandler = {
     },
     handle(handlerInput: Alexa.HandlerInput) {
         const speakOutput =
-            'Welcome, you can say Hello or Help. Which would you like to try?';
+            'Welcome, you can say Hello, Joke, or Help. Which would you like to try?';
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)

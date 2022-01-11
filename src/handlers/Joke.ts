@@ -1,21 +1,21 @@
 import * as Alexa from 'ask-sdk-core';
 
-const Hello: Alexa.RequestHandler = {
+const Joke: Alexa.RequestHandler = {
     canHandle(handlerInput: Alexa.HandlerInput) {
         return (
             Alexa.getRequestType(handlerInput.requestEnvelope) ===
                 'IntentRequest' &&
-            Alexa.getIntentName(handlerInput.requestEnvelope) ===
-                'HelloWorldIntent'
+            Alexa.getIntentName(handlerInput.requestEnvelope) === 'JokeIntent'
         );
     },
     handle(handlerInput: Alexa.HandlerInput) {
-        //const speakOutput = 'Well hello there! ';
         const speakOutput = `
-            Hello there!
-            I've got to tell you a secret...
-            <amazon:effect name="whispered">I'm not really a human.</amazon:effect>.
-            Can you believe it?
+            What happens when you eat aluminium foil?
+            <break time="0.5" />
+            You
+            <break time="0.25s" />
+            <emphasis level="strong">sheet</emphasis>
+            metal!
         `;
 
         return (
@@ -26,4 +26,4 @@ const Hello: Alexa.RequestHandler = {
         );
     },
 };
-export default Hello;
+export default Joke;

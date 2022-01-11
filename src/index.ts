@@ -2,6 +2,7 @@ import * as Alexa from 'ask-sdk-core';
 import ErrorHandler from './handlers/Error';
 import Hello from './handlers/Hello';
 import Help from './handlers/Help';
+import Joke from './handlers/Joke';
 import Launch from './handlers/Launch';
 import Reflector from './handlers/Reflector';
 import SessionEnd from './handlers/SessionEnd';
@@ -14,6 +15,7 @@ export const handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         Launch,
         Hello,
+        Joke,
         Help,
         Stop,
         SessionEnd,

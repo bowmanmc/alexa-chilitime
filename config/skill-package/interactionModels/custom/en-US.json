@@ -9,7 +9,13 @@
                 },
                 {
                     "name": "AMAZON.HelpIntent",
-                    "samples": []
+                    "samples": [
+                        "help",
+                        "guide",
+                        "user guide",
+                        "manual",
+                        "user manual"
+                    ]
                 },
                 {
                     "name": "AMAZON.StopIntent",
@@ -26,6 +32,16 @@
                         "hi",
                         "say hello world",
                         "say hello"
+                    ]
+                },
+                {
+                    "name": "JokeIntent",
+                    "slots": [],
+                    "samples": [
+                        "joke",
+                        "tell me a joke",
+                        "know any good jokes",
+                        "dad joke"
                     ]
                 },
                 {

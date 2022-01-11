@@ -2,6 +2,7 @@
     "askcliStatesVersion": "2020-03-31",
     "profiles": {
         "default": {
+            "skillId": "amzn1.ask.skill.45e1775c-b2ef-4284-ae55-ec11bd12dc73",
             "skillInfrastructure": {
                 "@ask-cli/lambda-deployer": {
                     "deployState": {}
