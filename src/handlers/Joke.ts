@@ -11,7 +11,7 @@ const Joke: Alexa.RequestHandler = {
     handle(handlerInput: Alexa.HandlerInput) {
         const speakOutput = `
             What happens when you eat aluminium foil?
-            <break time="0.5" />
+            <break time="0.5s" />
             You
             <break time="0.25s" />
             <emphasis level="strong">sheet</emphasis>
