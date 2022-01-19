@@ -10,14 +10,14 @@ const Joke: Alexa.RequestHandler = {
     },
     handle(handlerInput: Alexa.HandlerInput) {
         const speakOutput = `
-            What happens when you eat aluminium foil?
+            What happens when you eat aluminium foil, Michael?
             <break time="0.5s" />
             You
             <break time="0.25s" />
             <emphasis level="strong">sheet</emphasis>
             metal!
         `;
-
+        console.log('Telling another groaner...');
         return (
             handlerInput.responseBuilder
                 .speak(speakOutput)
