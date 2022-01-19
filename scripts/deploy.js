@@ -1,12 +1,12 @@
 const fs = require('fs');
 const archiver = require('archiver');
 const AWS = require('aws-sdk');
-AWS.config.update({region: `${process.env.AWS_DEFAULT_REGION}`});
 const filesize = require('filesize');
 const mkdirp = require('mkdirp');
 const pkg = require('../package.json');
 
 const FILENAME = `alexa-chilitime-${pkg.version}.zip`;
+AWS.config.update({ region: `${process.env.AWS_DEFAULT_REGION}` });
 
 const updateLambda = () => {
     console.log(`Updating lambda ${process.env.AWS_LAMBDA}`);
