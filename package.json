@@ -1,6 +1,6 @@
 {
     "name": "alexa-chilitime",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "Chilitime Alexa Skill",
     "main": "index.js",
     "scripts": {
@@ -9,8 +9,10 @@
         "build:install": "cp package.json build/lambda && cd build/lambda && npm install --production",
         "build:copy": "cp -r config build",
         "build": "npm-run-all --sequential build:clean build:copy lint build:compile build:install",
-        "deploy": "node scripts/deploy.js",
-        "deploy-old": "cd build && ask deploy",
+        "predeploy": "npm run build",
+        "deploy": "npm-run-all deploy:lambda deploy:skill",
+        "deploy:lambda": "node scripts/deploy.js",
+        "deploy:skill": "cd build && ask deploy",
         "commit": "git add . && git status && cz",
         "lint": "eslint --ignore-path .eslintignore --ext .ts .",
         "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
