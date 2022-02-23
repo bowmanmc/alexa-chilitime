@@ -5,6 +5,11 @@
             "skillMetadata": {
                 "src": "./skill-package"
             }
+        },
+        "michael-dev": {
+            "skillMetadata": {
+                "src": "./skill-package"
+            }
         }
     }
 }
